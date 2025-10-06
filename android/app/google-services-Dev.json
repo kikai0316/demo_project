@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "179706709496",
+    "firebase_url": "https://min--dev-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "min--dev",
+    "storage_bucket": "min--dev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179706709496:android:b2355ba0644e09a77b020d",
+        "android_client_info": {
+          "package_name": "com.islez.app.minmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIpFBxeEMPdJlDfvonc3TkFNdrdiaaFbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

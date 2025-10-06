@@ -1,0 +1,25 @@
+{
+    "flavor": "stg",
+    "appName": "minmin テスト版",
+    "appIdSuffix": "",
+    "api":"https://min.sup-api.com/",
+
+    "firebaseAndroidApiKey": "AIzaSyAChdf7dcabAJI-1W06R3zN-lVJgIwD3Yw",
+    "firebaseAndroidAppId": "1:1037955322294:android:41b8d4b195546e4fb8b117",
+    "firebaseAndroidMessagingSenderId": "1037955322294",
+    "firebaseAndroidProjectId": "sup-dev-edc86",
+    "firebaseAndroidStorageBucket": "sup-dev-edc86.firebasestorage.app",
+
+    "firebaseIosAppIdKey": "app-1-1037955322294-ios-760004bcf9b91626b8b117",
+    "firebaseIosApiKey": "AIzaSyDvrGEfVWfb62djhaGRMg3C132MIB4Jb3w",
+    "firebaseIosAppId": "1:1037955322294:ios:760004bcf9b91626b8b117",
+    "firebaseIosMessagingSenderId": "1037955322294",
+    "firebaseIosProjectId": "sup-dev-edc86",
+    "firebaseIosStorageBucket": "sup-dev-edc86.firebasestorage.app",
+    "firebaseIosIosBundleId": "com.islez.app.minmin",
+
+    "firebaseRealTimeURL":"https://min--dev-default-rtdb.asia-southeast1.firebasedatabase.app/",
+
+    "apiKey": "o0BjX3bK8o9NydU2469L3CvSlGbcIel7bMgrNME1"
+}
+  

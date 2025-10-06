@@ -1,0 +1,24 @@
+{
+    "flavor": "dev",
+    "appName": "minmin dev",
+    "appIdSuffix": ".dev",
+    "api":"https://gskm771kf7.execute-api.ap-northeast-1.amazonaws.com/prod",
+
+    "firebaseAndroidApiKey": "AIzaSyCIpFBxeEMPdJlDfvonc3TkFNdrdiaaFbc",
+    "firebaseAndroidAppId": "1:179706709496:android:b2355ba0644e09a77b020d",
+    "firebaseAndroidMessagingSenderId": "179706709496",
+    "firebaseAndroidProjectId": "min--dev",
+    "firebaseAndroidStorageBucket": "min--dev.firebasestorage.app",
+
+    "firebaseIosAppIdKey": "app-1-179706709496-ios-156218a6a1a818db7b020d",
+    "firebaseIosApiKey": "AIzaSyAb609R-Q6hCH2obBC4L8ZfnoUgxudZ5cE",
+    "firebaseIosAppId": "1:179706709496:ios:156218a6a1a818db7b020d",
+    "firebaseIosMessagingSenderId": "179706709496",
+    "firebaseIosProjectId": "min--dev",
+    "firebaseIosStorageBucket": "min--dev.firebasestorage.app",
+    "firebaseIosIosBundleId": "com.islez.app.minmin",
+
+    "firebaseRealTimeURL":"https://min--dev-default-rtdb.asia-southeast1.firebasedatabase.app/",
+
+    "apiKey": "o0BjX3bK8o9NydU2469L3CvSlGbcIel7bMgrNME1"
+  }

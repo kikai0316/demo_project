@@ -1,0 +1,103 @@
+name: demo_project
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.2+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  badges: ^3.1.2
+  build_runner: ^2.4.9
+  cached_network_image: ^3.4.1
+  carousel_slider: ^5.1.1
+  dart_geohash: ^2.1.0
+  dotted_border: ^2.1.0
+  firebase_auth: ^6.0.0
+  firebase_core: ^4.0.0
+  firebase_database: ^12.0.0
+  firebase_messaging: ^16.0.0
+  firebase_storage: ^13.0.0
+  flutter:
+    sdk: flutter
+  flutter_app_badge: ^2.0.2
+  flutter_card_swiper: ^7.0.2
+  flutter_hooks: ^0.20.5
+  flutter_image_compress: ^2.4.0
+  flutter_launcher_icons: ^0.14.3
+  flutter_libphonenumber: ^2.5.1
+  flutter_localizations:
+    sdk: flutter
+  flutter_native_splash: ^2.4.4
+  freezed: ^2.5.2
+  freezed_annotation: ^2.4.4
+  geocoding: ^4.0.0
+  hooks_riverpod: ^2.6.1
+  http: ^1.2.0
+  image_cropper: ^9.1.0
+  image_picker: ^1.1.2
+  in_app_review: ^2.0.10
+  infinite_scroll_pagination: ^5.1.0
+  intl: any
+  location: ^8.0.1
+  lottie: ^3.3.1
+  package_info_plus: ^8.3.0
+  path_provider: ^2.1.4
+  permission_handler: ^11.3.1
+  purchases_flutter: ^9.2.0
+  reorderable_grid_view: ^2.2.8
+  riverpod_annotation: ^2.6.1
+  riverpod_generator: ^2.4.0
+  shimmer_animation: ^2.2.2
+  url_launcher: ^6.3.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lint: ^2.3.0
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/animations/
+    - assets/icon/
+    - assets/icon/black/
+    - assets/icon/white/
+    - assets/image/
+    
+  fonts:
+    - family: Normal
+      fonts:
+        - asset: assets/font/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf
+          weight: 100
+        - asset: assets/font/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf
+          weight: 200
+        - asset: assets/font/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf
+          weight: 300
+        - asset: assets/font/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf
+          weight: 400
+        - asset: assets/font/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf
+          weight: 500
+        - asset: assets/font/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf
+          weight: 600
+        - asset: assets/font/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf
+          weight: 700
+        - asset: assets/font/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf
+          weight: 800
+        - asset: assets/font/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf
+          weight: 900
+
+flutter_native_splash:
+  image: "assets/image/logo3.png"
+  color: "#ADE2FF"
+  android_12:
+   color: "#ADE2FF"
+   image: "assets/image/logo3.png"
+
+flutter_icons:       
+  android: true
+  ios: true
+  image_path: "assets/image/app_icon.png"
