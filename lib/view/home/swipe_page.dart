@@ -1,23 +1,19 @@
 import 'dart:async';
 
+import 'package:demo_project/component/widget_component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:demo_project/component/widget_component.dart';
 import 'package:demo_project/constant/color_constant.dart';
 import 'package:demo_project/l10n/app_localizations.dart';
 import 'package:demo_project/model/app_model.dart';
-import 'package:demo_project/model/user_model.dart';
-import 'package:demo_project/utility/api_functions/api_match_utility.dart';
 import 'package:demo_project/utility/menu_function_utility.dart';
-import 'package:demo_project/utility/notistack/center_snackbar_utility.dart';
 import 'package:demo_project/utility/notistack/dialog_utility.dart';
 import 'package:demo_project/utility/path_provider_utility.dart';
 import 'package:demo_project/utility/permission_handler_utility.dart';
 import 'package:demo_project/utility/screen_transition_utility.dart';
-import 'package:demo_project/view/page/match_success_page.dart';
 import 'package:demo_project/view/page/payment_page.dart';
 import 'package:demo_project/view_model/liked_me_users.dart';
 import 'package:demo_project/view_model/subscription.dart';
@@ -31,9 +27,9 @@ final _controller = CardSwiperController();
 class SwipePage extends HookConsumerWidget {
   const SwipePage({
     super.key,
-    required this.userData,
+    // required this.userData,
   });
-  final UserType userData;
+  // final UserType userData;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final swipeUsers = ref.watch(swipeUsersDataNotifierProvider).value;
@@ -50,7 +46,7 @@ class SwipePage extends HookConsumerWidget {
           squareSize: double.infinity,
           gradient: mainGradation(),
           child: Scaffold(
-            backgroundColor: Colors.transparent,
+            backgroundColor: Colors.black,
             resizeToAvoidBottomInset: false,
             body: Stack(
               alignment: Alignment.center,
@@ -163,13 +159,13 @@ class SwipePage extends HookConsumerWidget {
     ValueNotifier<int?> currentIndex,
   ) {
     return () async {
-      isLoading.value = true;
-      final notifier = ref.read(swipeUsersDataNotifierProvider.notifier);
-      await Future<void>.delayed(const Duration(milliseconds: 1000));
-      final newDatas = await notifier.reFetch(userData);
-      if (!context.mounted) return;
-      isLoading.value = false;
-      if (newDatas == null) currentIndex.value = getInitCurrentIndex(newDatas);
+      // isLoading.value = true;
+      // final notifier = ref.read(swipeUsersDataNotifierProvider.notifier);
+      // await Future<void>.delayed(const Duration(milliseconds: 1000));
+      // final newDatas = await notifier.reFetch(a);
+      // if (!context.mounted) return;
+      // isLoading.value = false;
+      // if (newDatas == null) currentIndex.value = getInitCurrentIndex(newDatas);
     };
   }
 
@@ -270,32 +266,32 @@ class SwipePage extends HookConsumerWidget {
     ValueNotifier<int?> currentIndex,
   ) async {
     try {
-      final swipeUsersState = ref.watch(swipeUsersDataNotifierProvider);
-      final swipeUsers = swipeUsersState.value ?? [];
-      final targetUser = swipeUsers[index].user;
-      final targetId = targetUser.id;
-      final action = direction.toSwipeActionType();
-      final myId = userData.id;
+      // final swipeUsersState = ref.watch(swipeUsersDataNotifierProvider);
+      // final swipeUsers = swipeUsersState.value ?? [];
+      // final targetUser = swipeUsers[index].user;
+      // final targetId = targetUser.id;
+      // final action = direction.toSwipeActionType();
+      // final myId = userData.id;
 
-      final isMatch = await apiCreateMatch(myId, targetId, action.toInt());
-      if (!context.mounted) return false;
-      ////成功////
-      if (isMatch == true) {
-        final partner = targetUser.toUserPreviewType();
-        final myData = userData.toUserPreviewType();
-        final page = MatchSuccessPage(partner: partner, myData: myData);
-        ScreenTransition(context, page).scale();
-      }
-      ////スワイプしたことをアップデート////
-      if (isMatch != null) {
-        swipeActionCallNotifier(ref, targetUser.toUserPreviewType());
-        return true;
-      }
-      ////エラー////
-      final ln = AppLocalizations.of(context)!;
-      HapticFeedback.vibrate();
-      nShowCenterSnackBar(context, message: ln.someErrorOccurred);
-      currentIndex.value = index;
+      // final isMatch = await apiCreateMatch(myId, targetId, action.toInt());
+      // if (!context.mounted) return false;
+      // ////成功////
+      // if (isMatch == true) {
+      //   final partner = targetUser.toUserPreviewType();
+      //   final myData = userData.toUserPreviewType();
+      //   final page = MatchSuccessPage(partner: partner, myData: myData);
+      //   ScreenTransition(context, page).scale();
+      // }
+      // ////スワイプしたことをアップデート////
+      // if (isMatch != null) {
+      //   swipeActionCallNotifier(ref, targetUser.toUserPreviewType());
+      //   return true;
+      // }
+      // ////エラー////
+      // final ln = AppLocalizations.of(context)!;
+      // HapticFeedback.vibrate();
+      // nShowCenterSnackBar(context, message: ln.someErrorOccurred);
+      // currentIndex.value = index;
       return false;
     } catch (_) {
       return false;
@@ -308,11 +304,11 @@ class SwipePage extends HookConsumerWidget {
     int index,
     List<SwipeUserType> swipeUsers,
   ) async {
-    try {
-      final notifier = ref.read(swipeUsersDataNotifierProvider.notifier);
-      if (index != swipeUsers.length - 5 || !context.mounted) return;
-      notifier.reFetch(userData);
-    } catch (_) {}
+    // try {
+    //   final notifier = ref.read(swipeUsersDataNotifierProvider.notifier);
+    //   if (index != swipeUsers.length - 5 || !context.mounted) return;
+    //   notifier.reFetch(userData);
+    // } catch (_) {}
   }
 
   bool getIsSwipeWidget(List<SwipeUserType>? swipeUsers) {

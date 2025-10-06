@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 const mainBackgroundColor = Color(0xFFFBF8F1);
 const subBackgroundColor = Color(0xFF191919);
+const pinkColor = Color(0xFFFFCFEA);
+const pinkColor2 = Color(0xFFFFF5F9);
 const blueColor = Color(0xFF9cdbfe);
 const blueColor3 = Color(0xFF04fcfc);
 const blueColor2 = Color(0xFFEBFEF5);
@@ -24,7 +26,7 @@ Gradient mainGradation({
   Alignment begin = FractionalOffset.topCenter,
   Alignment end = FractionalOffset.bottomCenter,
 }) {
-  final color = [blueColor, blueColor2];
+  final color = [pinkColor, pinkColor2];
   const stops = <double>[0.3, 1];
   return LinearGradient(begin: begin, end: end, colors: color, stops: stops);
 }

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:demo_project/view/home/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
@@ -33,7 +34,7 @@ void main() async {
   // appStartStopwatch = Stopwatch()..start();
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   final locale = WidgetsBinding.instance.platformDispatcher.locale;
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await Future.wait([
     Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform),
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]),
@@ -60,14 +61,13 @@ class MyApp extends HookConsumerWidget {
     ref.watch(userDataNotifierProvider);
 
     return CupertinoApp(
-      navigatorKey: navigatorKey,
-      theme: const CupertinoThemeData(brightness: Brightness.light),
-      locale: locale,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      debugShowCheckedModeBanner: false,
-      home: const InitialPage(),
-    );
+        navigatorKey: navigatorKey,
+        theme: const CupertinoThemeData(brightness: Brightness.light),
+        locale: locale,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        debugShowCheckedModeBanner: false,
+        home: const HomePage());
   }
 }
 

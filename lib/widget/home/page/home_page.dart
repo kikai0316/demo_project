@@ -35,6 +35,7 @@ Widget navigationItemWidget(
       onTap: onTap,
       padding: nSpacing(allSize: safeAreaHeight * 0.01),
       iconImage: "black/$icon",
+      imageCustomColor: Colors.white,
       iconSize: safeAreaHeight * (isTalk ? 0.04 : 0.035),
     ),
   );

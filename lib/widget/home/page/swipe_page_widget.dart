@@ -48,13 +48,13 @@ Widget logoWidget(double safeAreaWidth) {
   return Align(
     alignment: Alignment.topCenter,
     child: Transform.scale(
-      scale: 3,
+      scale: 4,
       child: Hero(
         tag: "app_logo",
         child: nContainer(
           // margin: nSpacing(left: safeAreaWidth * 0.05),
           squareSize: safeAreaWidth * 0.1,
-          image: assetImg("image/logo.png"),
+          image: assetImg("image/logo4.png"),
         ),
       ),
     ),

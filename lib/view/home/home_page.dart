@@ -19,8 +19,12 @@ import 'package:demo_project/widget/home/page/home_page.dart';
 import 'package:demo_project/widget/widget/surveillance_widget.dart';
 
 class HomePage extends HookConsumerWidget {
-  const HomePage({super.key, required this.userData});
-  final UserType userData;
+  const HomePage({
+    super.key,
+    // required this.userData
+  });
+  // final UserType userData;
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pageIndex = useState<int>(0);
@@ -39,16 +43,12 @@ class HomePage extends HookConsumerWidget {
             resizeToAvoidBottomInset: false,
             body: IndexedStack(
               index: pageIndex.value,
-              children: [
-                SwipePage(userData: userData),
-                const TalkPage(),
-                const AccountPage(),
-              ],
+              children: const [SwipePage(), TalkPage(), AccountPage()],
             ),
             //↓ボトムバー
             bottomNavigationBar: navigationBaseWidget(
               safeAreaHeight,
-              color: [null, null, mainBackgroundColor][pageIndex.value],
+              color: subBackgroundColor,
               children: [
                 for (int i = 0; i < 3; i++)
                   navigationItemWidget(
